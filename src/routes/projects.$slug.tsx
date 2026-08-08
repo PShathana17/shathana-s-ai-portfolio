@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
-import { getProject, projects } from "@/data/projects";
+import { getProject, projects, type Project } from "@/data/projects";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
@@ -58,7 +58,7 @@ function List({ items }: { items: string[] }) {
 }
 
 function ProjectDetail() {
-  const { project } = Route.useLoaderData();
+  const { project } = Route.useLoaderData() as { project: Project };
   const others = projects.filter((p) => p.slug !== project.slug).slice(0, 3);
 
   return (
