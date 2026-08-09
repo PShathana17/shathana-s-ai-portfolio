@@ -117,7 +117,7 @@ export function SiteNav() {
             {light ? <Moon className="size-4" /> : <Sun className="size-4" />}
           </Button>
           <Button asChild size="sm" className="hidden shadow-none sm:inline-flex">
-            <a href={RESUME_PATH} download>
+            <a href={RESUME_PATH} download target="_blank" rel="noreferrer noopener">
               <FileDown className="size-4" /> Resume
             </a>
           </Button>
@@ -150,7 +150,7 @@ export function SiteNav() {
             ))}
             <li>
               <Button asChild size="sm" className="mt-2 w-full">
-                <a href={RESUME_PATH} download>
+                <a href={RESUME_PATH} download target="_blank" rel="noreferrer noopener">
                   <FileDown className="size-4" /> Download Resume
                 </a>
               </Button>
