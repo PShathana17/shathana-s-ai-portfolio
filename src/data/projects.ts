@@ -1,5 +1,4 @@
 import xray from "@/assets/proj-xray.jpg";
-import churn from "@/assets/proj-churn.jpg";
 import netflix from "@/assets/proj-netflix.jpg";
 import prime from "@/assets/proj-prime.jpg";
 import blinkit from "@/assets/proj-blinkit.jpg";
@@ -44,7 +43,7 @@ export const projects: Project[] = [
     image: xray,
     result: "Approximately 90% accuracy",
     featured: true,
-    github: "https://github.com/PShathana17/Pneumonia-Detection--",
+    github: "https://github.com/PShathana17/Pneumonia-Detection-",
     demo: null,
     detail: {
       overview:
@@ -79,45 +78,6 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "customer-churn-prediction",
-    title: "Customer Churn Prediction",
-    summary:
-      "Built a machine learning solution to analyze customer behavior and predict customer churn.",
-    tech: ["Python", "Pandas", "Scikit-learn", "Machine Learning"],
-    categories: ["AI/ML", "Python"],
-    image: churn,
-    featured: true,
-    github: null,
-    demo: null,
-    detail: {
-      overview:
-        "A supervised machine learning project that predicts whether a customer is likely to churn, based on account, usage and contract attributes.",
-      problem:
-        "Retaining an existing customer is cheaper than acquiring a new one, so the business need is to identify at-risk customers early enough to act.",
-      dataset:
-        "A tabular customer dataset with demographic, contract and usage columns plus a binary churn label. Contains missing values and a mix of categorical and numeric features.",
-      contribution: [
-        "Performed data cleaning, encoding and exploratory analysis with Pandas.",
-        "Trained and compared multiple classifiers with Scikit-learn.",
-        "Interpreted feature importance to explain the drivers of churn.",
-      ],
-      approach: [
-        "Cleaned missing values and converted categorical fields using label and one-hot encoding.",
-        "Explored churn rate across contract type, tenure and monthly charges.",
-        "Scaled numeric features and trained logistic regression, decision tree and random forest models.",
-        "Compared models using accuracy, precision, recall and the confusion matrix.",
-      ],
-      results: [
-        "The ensemble model gave the most balanced precision and recall among the models tried.",
-        "Short tenure and month-to-month contracts stood out as the strongest churn indicators.",
-      ],
-      challenges: [
-        "The churn class was the minority, so accuracy alone was misleading.",
-        "Encoding high-cardinality categorical columns without inflating dimensionality.",
-      ],
-    },
-  },
-  {
     slug: "netflix-data-analysis-dashboard",
     title: "Netflix Data Analysis Dashboard",
     summary: "Created an interactive Power BI dashboard to analyze Netflix content and trends.",
@@ -125,7 +85,7 @@ export const projects: Project[] = [
     categories: ["Data Analytics"],
     image: netflix,
     featured: true,
-    github: "https://github.com/PShathana17/netflix-powerbi-dashboardd",
+    github: "https://github.com/PShathana17/netflix-powerbi-dashboard",
     demo: null,
     detail: {
       overview:
@@ -160,7 +120,7 @@ export const projects: Project[] = [
     tech: ["Power BI", "Power Query", "DAX"],
     categories: ["Data Analytics"],
     image: prime,
-    github: "https://github.com/PShathana17/prime-video-powerbi-dashboardd",
+    github: "https://github.com/PShathana17/prime-video-powerbi-dashboard",
     demo: null,
     detail: {
       overview:
@@ -211,13 +171,14 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "movie-dataset-analysis",
-    title: "Movie Dataset Analysis",
-    summary: "Performed SQL-based analysis on movie data to extract meaningful insights.",
-    tech: ["SQL"],
+    slug: "movie-dataset-sql-analysis",
+    title: "Movie Dataset SQL Analysis",
+    summary:
+      "Performed SQL-based analysis on a movie dataset using filtering, aggregation, grouping and other SQL queries.",
+    tech: ["SQL", "MySQL", "Data Analysis"],
     categories: ["SQL"],
     image: movies,
-    github: "https://github.com/PShathana17/movie-dataset-sql-analysiss",
+    github: "https://github.com/PShathana17/movie-dataset-sql-analysis",
     demo: null,
     detail: {
       overview: "An analytical SQL project answering business questions about a movie dataset.",
