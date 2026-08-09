@@ -44,7 +44,7 @@ export const projects: Project[] = [
     image: xray,
     result: "Approximately 90% accuracy",
     featured: true,
-    github: null,
+    github: "https://github.com/PShathana17/Pneumonia-Detection--",
     demo: null,
     detail: {
       overview:
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     categories: ["Data Analytics"],
     image: netflix,
     featured: true,
-    github: null,
+    github: "https://github.com/PShathana17/netflix-powerbi-dashboardd",
     demo: null,
     detail: {
       overview:
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     tech: ["Power BI", "Power Query", "DAX"],
     categories: ["Data Analytics"],
     image: prime,
-    github: null,
+    github: "https://github.com/PShathana17/prime-video-powerbi-dashboardd",
     demo: null,
     detail: {
       overview:
@@ -217,7 +217,7 @@ export const projects: Project[] = [
     tech: ["SQL"],
     categories: ["SQL"],
     image: movies,
-    github: null,
+    github: "https://github.com/PShathana17/movie-dataset-sql-analysiss",
     demo: null,
     detail: {
       overview: "An analytical SQL project answering business questions about a movie dataset.",

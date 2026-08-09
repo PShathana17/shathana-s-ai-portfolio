@@ -25,7 +25,14 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects, categories, type Category } from "@/data/projects";
-import { profile, skillGroups, experience, certifications, RESUME_PATH } from "@/data/profile";
+import {
+  profile,
+  skillGroups,
+  experience,
+  certifications,
+  RESUME_PATH,
+  PROFILE_IMAGE,
+} from "@/data/profile";
 import { cn } from "@/lib/utils";
 
 const TITLE = "Shathana P — Aspiring Data Analyst & Data Engineer | AI/ML";
@@ -80,7 +87,8 @@ function Hero() {
   return (
     <section id="home" aria-label="Introduction" className="relative overflow-hidden">
       <div aria-hidden className="grid-backdrop pointer-events-none absolute inset-0 opacity-40" />
-      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-32 sm:px-6 sm:pb-28 sm:pt-40">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 pb-20 pt-32 sm:px-6 sm:pb-28 sm:pt-40 lg:grid-cols-[1.3fr_1fr] lg:gap-14">
+        <div>
         <Reveal>
           <p className="text-sm font-medium text-muted-foreground">Hi, I&apos;m</p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-6xl">
@@ -104,7 +112,7 @@ function Hero() {
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <a href={RESUME_PATH} download>
+              <a href={RESUME_PATH} download target="_blank" rel="noreferrer noopener">
                 <FileDown className="size-4" /> Download Resume
               </a>
             </Button>
@@ -130,6 +138,22 @@ function Hero() {
                 </a>
               </Button>
             </div>
+          </div>
+        </Reveal>
+        </div>
+
+        <Reveal delay={150} className="order-first justify-self-center lg:order-none lg:justify-self-end">
+          <div className="card-surface relative overflow-hidden rounded-full p-1.5">
+            <img
+              src={PROFILE_IMAGE}
+              alt="Shathana P profile photo"
+              width={640}
+              height={640}
+              decoding="async"
+              fetchPriority="high"
+              sizes="(min-width: 1024px) 320px, 220px"
+              className="aspect-square w-[220px] rounded-full object-cover object-top sm:w-[260px] lg:w-[320px]"
+            />
           </div>
         </Reveal>
       </div>
@@ -279,7 +303,8 @@ function Projects() {
         ))}
       </ul>
       <p className="mt-6 text-xs text-muted-foreground">
-        GitHub and live demo links are being finalised and will be added soon.
+        Repository links are shown where available. Remaining GitHub and live demo links are being
+        finalised.
       </p>
     </section>
   );
@@ -354,9 +379,8 @@ function Certifications() {
         id="certifications"
         eyebrow="Certifications"
         title="Certifications & Courses"
-        subtitle="Certificate links will be added as they are collected."
       />
-      <ul className="grid gap-5 sm:grid-cols-3">
+      <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {certifications.map((c, i) => (
           <Reveal as="li" key={c.name} delay={i * 80}>
             <div className="card-surface h-full rounded-2xl p-6">
@@ -365,9 +389,6 @@ function Certifications() {
               </span>
               <h3 className="mt-4 font-semibold leading-snug">{c.name}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{c.issuer}</p>
-              <p className="mt-3 text-xs text-muted-foreground">
-                {c.note ?? "Certificate link to be added"}
-              </p>
             </div>
           </Reveal>
         ))}
@@ -387,7 +408,7 @@ function ResumeCta() {
           My resume covers my coursework, projects and technical skills in detail.
         </p>
         <Button asChild size="lg" className="mt-6">
-          <a href={RESUME_PATH} download>
+          <a href={RESUME_PATH} download target="_blank" rel="noreferrer noopener">
             <FileDown className="size-4" /> Download Resume
           </a>
         </Button>
