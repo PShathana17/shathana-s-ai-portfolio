@@ -53,7 +53,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="mt-auto flex flex-wrap gap-2 pt-1">
           <Button asChild size="sm" variant="secondary" disabled={!project.github}>
             {project.github ? (
-              <a href={project.github} target="_blank" rel="noreferrer noopener">
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
                 <Github className="size-4" /> GitHub
               </a>
             ) : (
@@ -64,7 +64,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </Button>
           <Button asChild size="sm" variant="secondary">
             {project.demo ? (
-              <a href={project.demo} target="_blank" rel="noreferrer noopener">
+              <a href={project.demo} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="size-4" /> Live Demo
               </a>
             ) : (

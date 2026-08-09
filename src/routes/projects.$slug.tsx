@@ -89,7 +89,7 @@ function ProjectDetail() {
           <div className="mt-6 flex flex-wrap gap-2">
             <Button asChild size="sm" variant="secondary">
               {project.github ? (
-                <a href={project.github} target="_blank" rel="noreferrer noopener">
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <Github className="size-4" /> GitHub
                 </a>
               ) : (
@@ -100,7 +100,7 @@ function ProjectDetail() {
             </Button>
             <Button asChild size="sm" variant="secondary">
               {project.demo ? (
-                <a href={project.demo} target="_blank" rel="noreferrer noopener">
+                <a href={project.demo} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="size-4" /> Live Demo
                 </a>
               ) : (
