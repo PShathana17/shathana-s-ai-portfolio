@@ -10,27 +10,30 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/shathana-palani-9bbbb138b",
 };
 
-export const RESUME_PATH = "/shathana-p-resume.pdf";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
+import profileImage from "@/assets/shathana-profile.jpg.asset.json";
+
+export const RESUME_PATH = resumeAsset.url;
+export const PROFILE_IMAGE = profileImage.url;
 
 export const skillGroups = [
   { title: "Programming", items: ["Python", "SQL"] },
-  { title: "Data Analysis", items: ["Pandas", "NumPy", "Matplotlib"] },
-  { title: "Data Visualization", items: ["Power BI", "Tableau"] },
+  { title: "Data Analysis", items: ["Pandas", "Matplotlib", "Power BI"] },
   {
     title: "AI / Machine Learning",
-    items: ["Machine Learning", "Deep Learning", "CNN", "TensorFlow", "Keras", "NLP"],
+    items: ["Machine Learning", "Deep Learning", "CNN", "NLP", "Transformers", "TensorFlow"],
   },
-  { title: "Tools", items: ["Git", "GitHub", "VS Code", "Google Colab"] },
+  { title: "Tools", items: ["GitHub", "Google Colab", "VS Code"] },
 ];
 
 export const experience = [
   {
     title: "AI/ML Development",
-    body: "Machine learning and deep learning project development using Python, TensorFlow and Scikit-learn.",
+    body: "Machine learning and deep learning project development using Python, TensorFlow and related AI/ML tools.",
   },
   {
     title: "Data Analytics",
-    body: "Data cleaning, analysis and visualization using Python, Pandas and SQL.",
+    body: "Data cleaning, analysis and visualization using Python, Pandas, SQL and Power BI.",
   },
   {
     title: "Power BI",
@@ -43,17 +46,8 @@ export const experience = [
 ];
 
 export const certifications = [
-  {
-    name: "Introduction to Business Intelligence",
-    issuer: "Infosys Springboard",
-  },
-  {
-    name: "AI for Beginners",
-    issuer: "HP LIFE",
-  },
-  {
-    name: "Udemy certifications",
-    issuer: "Udemy",
-    note: "Certificate details to be added",
-  },
+  { name: "Data Visualization", issuer: "Tata" },
+  { name: "Python: Analyzing Data", issuer: "Infosys" },
+  { name: "GenAI Powered Data Analytics", issuer: "Tata" },
+  { name: "Data Analyst Foundation", issuer: "Udemy" },
 ];
