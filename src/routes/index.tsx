@@ -80,7 +80,8 @@ function Hero() {
   return (
     <section id="home" aria-label="Introduction" className="relative overflow-hidden">
       <div aria-hidden className="grid-backdrop pointer-events-none absolute inset-0 opacity-40" />
-      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-32 sm:px-6 sm:pb-28 sm:pt-40">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 pb-20 pt-32 sm:px-6 sm:pb-28 sm:pt-40 lg:grid-cols-[1.3fr_1fr] lg:gap-14">
+        <div>
         <Reveal>
           <p className="text-sm font-medium text-muted-foreground">Hi, I&apos;m</p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-6xl">
@@ -104,7 +105,7 @@ function Hero() {
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <a href={RESUME_PATH} download>
+              <a href={RESUME_PATH} download target="_blank" rel="noreferrer noopener">
                 <FileDown className="size-4" /> Download Resume
               </a>
             </Button>
@@ -130,6 +131,22 @@ function Hero() {
                 </a>
               </Button>
             </div>
+          </div>
+        </Reveal>
+        </div>
+
+        <Reveal delay={150} className="order-first justify-self-center lg:order-none lg:justify-self-end">
+          <div className="card-surface relative overflow-hidden rounded-full p-1.5">
+            <img
+              src={PROFILE_IMAGE}
+              alt="Shathana P profile photo"
+              width={640}
+              height={640}
+              decoding="async"
+              fetchPriority="high"
+              sizes="(min-width: 1024px) 320px, 220px"
+              className="aspect-square w-[220px] rounded-full object-cover object-top sm:w-[260px] lg:w-[320px]"
+            />
           </div>
         </Reveal>
       </div>
